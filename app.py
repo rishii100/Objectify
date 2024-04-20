@@ -11,7 +11,7 @@ load_dotenv()
 
 # print(os.getenv("MY_SECRET_KEY"))
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY")) 
+genai.configure(api_key=os.getenv(st.secrets["GOOGLE_API_KEY"]))
 
 # Set up the model
 generation_config = {
