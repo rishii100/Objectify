@@ -5,11 +5,10 @@ import os
 
 import google.generativeai as genai
 
-from dotenv import load_dotenv, dotenv_values  # we can use load_dotenv or dotenv_values both perform the same task
+from dotenv import load_dotenv, dotenv_values  
 
 load_dotenv()
 
-# print(os.getenv("MY_SECRET_KEY"))
 
 genai.configure(api_key=os.getenv(st.secrets["GOOGLE_API_KEY"]))
 
@@ -32,7 +31,7 @@ def main():
         # Display the uploaded image
         st.image(uploaded_image, caption="Uploaded Image.", use_column_width=True)
 
-        # Process the image (example: get image dimensions)
+        # Process the image 
         image = Image.open(uploaded_image)
         width, height = image.size
         st.write("Image Dimensions:", f"{width}x{height}")
