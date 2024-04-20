@@ -24,16 +24,6 @@ generation_config = {
 
 def main():
     st.title("Object Finder 🔍")
-    
-    disclaimer_message = """This is a object detector model so preferably use images containing different objects,tools... for best results 🙂"""
-
-    # Hide the disclaimer initially
-    st.write("")
-
-    # Show the disclaimer if the button is clicked
-    with st.expander("Disclaimer ⚠️", expanded=False):
-       st.markdown(disclaimer_message)
-    
 
     # Upload image through Streamlit
     uploaded_image = st.file_uploader("Choose an image ...", type=["jpg", "jpeg", "png"])
@@ -56,11 +46,6 @@ def main():
 
             
             st.write("The objects detected are \n", response.text)
-
-            st.success("Thanks for visiting 🤩!!")
-
-            st.info("For trying out with another image just click on browse files, enjoy 😄!!!")
-
 
 if __name__ == "__main__":
     main()
