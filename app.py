@@ -22,7 +22,7 @@ generation_config = {
 
 
 def main():
-    st.title("Object Finder 🔍")
+    st.title("Objectify:Object Finder🔍")
 
     # Upload image through Streamlit
     uploaded_image = st.file_uploader("Choose an image ...", type=["jpg", "jpeg", "png"])
